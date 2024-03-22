@@ -54,7 +54,7 @@ const getMessage = async (req, res) => {
 
     const conversation = await Conversation.findOne({
       participants: { $all: [senderId, userToChatId] },
-    }).populate("messages"); //POPULATE GETS US HOLD OF MESSAGES INSTEAD OF IDS
+    }).populate("messages"); //POPULATE GETS US HOLD OF MESSAGES INSTEAD OF OTHER PROPS
 
     if (!conversation) return res.status(200).json([]);
 
