@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
 // CUSTOM HOOK TO USE AuthContext
 export const useAuthContext = () => {

@@ -8,7 +8,8 @@ import userRoutes from "./routes/userRoutes.js";
 
 import connectMongoDB from "./db/connectToDB.js";
 
-const app = express();
+import { app, server } from "./socket/socket.js";
+
 const port = process.env.PORT || 8000;
 
 app.use(express.json());
@@ -16,12 +17,14 @@ app.use(cookieParser());
 
 // AUTHENTICATION ROUTES
 app.use("/api/auth", authRoutes);
+
 // MESSAGE ROUTES
 app.use("/api/messages", messageRoutes);
+
 // SHOW ALL USERS IN SIDEBAR
 app.use("/api/users", userRoutes);
 
-app.listen(port, () => {
+server.listen(port, () => {
   connectMongoDB();
   console.log(`Server is running on port ${port}`);
 });

@@ -2,10 +2,16 @@ import React, { useEffect, useRef } from 'react'
 import Message from './Message'
 import useGetMessages from '../../hooks/useGetMessages'
 import MessageSkeleton from '../skeleton/MessageSkeleton';
+import useListenMessages from '../../hooks/useListenMessages';
 
 const Messages = () => {
     const { loading, messages } = useGetMessages();
     // console.log(messages);
+
+    // SOCKET IO FUNCTIONALITY HOOK
+    useListenMessages();
+
+
     const lastMessref = useRef();
 
     useEffect(() => {
