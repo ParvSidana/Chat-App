@@ -27,10 +27,10 @@ const SearchInput = () => {
     }
     return (
         <form onSubmit={handleSubmit} className='flex items-center gap-2'>
-            <input type="text" placeholder='Search Here' className='input input-bordered rounded-full'
+            <input type="text" placeholder='Search Here...' className='input input-bordered rounded-full text-black'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)} />
-            <button className='btn btn-circle text-white bg-slate-900' type='submit'>
+            <button className='btn btn-circle hover:bg-green-600 text-white bg-slate-900' type='submit'>
                 <BsSearch className='w-6 h-6 outline-none' />
             </button>
 

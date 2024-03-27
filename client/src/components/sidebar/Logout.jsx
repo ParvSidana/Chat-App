@@ -8,8 +8,8 @@ const Logout = () => {
 
 
     return (
-        <div className='mt-auto'>
-            {!loading ? <BiLogOut className='w-6 h-6 cursor-pointer '
+        <div className='mt-auto pt-2'>
+            {!loading ? <BiLogOut className='w-7 h-7  text-black cursor-pointer hover:bg-red-600 rounded-md '
                 onClick={logout} /> :
                 <span className='loading loading-spinner'></span>
             }

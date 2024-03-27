@@ -22,15 +22,17 @@ const Message = ({ message }) => {
 
 
     return (
-        <div className={`chat ${chatClass}`}>
+        <div className={`chat ${chatClass} whitespace-normal break-all`}>
             <div className='chat-image avatar'>
                 <div className='w-10 rounded-full'>
                     <img src={profileClass} alt="chat bubble" />
                 </div>
             </div>
             <div className={`chat-bubble text-white ${bgColor} ${shakeClass}`}>{message.message}</div>
-            <div className='chat-footer opacity-90 text-xs flex gap-1 items-center '>{formattedTime}</div>
+            <div className='chat-footer opacity-90 text-xs flex gap-1 items-center'>{formattedTime}</div>
         </div>
+
+
     )
 }
 

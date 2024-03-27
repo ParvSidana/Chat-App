@@ -33,8 +33,7 @@ const Signup = () => {
         <div className='flex flex-col justify-center items-center min-w-96 mx-auto'>
             <div className='w-full p-6 shadow-md rounded-md bg-clip-padding bg-gray-200'>
                 <h1 className='text-3xl font-semibold text-center text-black'>
-                    Sign Up
-                    <span className=''> FriendFusion</span>
+                    <span className='alegreya'>FriendFusion</span>
                 </h1>
 
                 <form onSubmit={handleSubmit}>
@@ -91,7 +90,7 @@ const Signup = () => {
                     {/* SIGNUP FORM */}
 
                     <div>
-                        <button className='btn btn-block btn-sm mt-2 border border-slate-700' disabled={loading}
+                        <button className='btn btn-block  hover:bg-red-400 btn-sm mt-2 border border-slate-700 text-base' disabled={loading}
                         >
                             {loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
                         </button>

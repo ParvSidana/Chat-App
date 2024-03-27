@@ -12,7 +12,7 @@ const Conversation = (props) => {
     const isSelected = selectedConversation?._id === props.conversation._id;
     return (
         <>
-            <div className={`flex gap-2 items-center rounded p-2 py-1 cursor-pointer hover:bg-sky-500 ${isSelected ? "bg-sky-500" : ""} `}
+            <div className={`flex gap-2 items-center rounded p-2 py-1 cursor-pointer hover:bg-green-500 ${isSelected ? "bg-green-500" : ""} `}
                 onClick={() => setSelectedConversation(props.conversation)}>
 
 
